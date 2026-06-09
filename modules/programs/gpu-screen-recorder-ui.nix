@@ -10,6 +10,9 @@ let
   wrapperDir = "/run/wrappers/bin";
 in
 {
+  meta.maintainers = with lib.hm.maintainers; [
+    mowmdown
+  ];
   options.programs.gpu-screen-recorder-ui = {
     enable = lib.mkEnableOption "gpu-screen-recorder-ui, a ShadowPlay-style overlay for GPU Screen Recorder";
 
